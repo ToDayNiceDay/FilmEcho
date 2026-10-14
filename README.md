@@ -4,7 +4,7 @@
 
 FilmEcho 是 Windows 英语电影跟读播放器：播放本地电影、重听台词、双字幕、离线查词、生词笔记与原句回放。
 
-**下载入口：[GitHub Releases](https://github.com/ToDayNiceDay/FilmEcho/releases)**。首次运行包正在准备，正式公开后可从这里下载。解压整个 ZIP，双击 `英语跟读播放器.exe`，无需编译。需要 Windows x64 与 .NET Framework 4.8。
+**下载入口：[GitHub Releases](https://github.com/ToDayNiceDay/FilmEcho/releases)**。1.4.3 运行包已上传为 Release 草稿，第三方分发材料核对完成后再公开，届时可从这里下载。解压整个 ZIP，双击 `英语跟读播放器.exe`，无需编译。需要 Windows x64 与 .NET Framework 4.8。
 
 ## 1.4.3 发布版
 
