@@ -1,0 +1,49 @@
+# FilmEcho
+
+一款用于视频播放与英语学习的软件。 / A computer application for video playback and English learning.
+
+FilmEcho 是 Windows 英语电影跟读播放器：播放本地电影、重听台词、双字幕、离线查词、生词笔记与原句回放。
+
+**下载入口：[GitHub Releases](https://github.com/ToDayNiceDay/FilmEcho/releases)**。1.4.3 运行包已上传为 Release 草稿，第三方分发材料核对完成后再公开，届时可从这里下载。解压整个 ZIP，双击 `英语跟读播放器.exe`，无需编译。需要 Windows x64 与 .NET Framework 4.8。
+
+## 1.4.3 发布版
+
+- 播放、暂停、3/5 秒跳转、重听原句、句子循环、句尾自动暂停。
+- 英语音轨与双字幕选择；支持本机 OCR 识别画面字幕。
+- 离线英汉查词、在线英语释义和原声地址补充、本机英语朗读。
+- 生词、原句、笔记、播放进度按电影分别保存在本地，可导出 CSV。
+- 顶部“打开浏览器”只启动系统默认浏览器，不指定网站，也不自动发送查询或学习内容。没有内嵌 Google 翻译或 WebView2 依赖。
+- 使用分布仅保留地区地图，移除指标选择、示例、导入、刷新、概览和排行。全国统计服务尚未接入，不显示虚构使用量，也不上传使用信息。
+- 应用内更新入口支持新版提示、下载、签名及哈希验证、重启更新和替换失败恢复。
+
+## 使用方式
+
+1. 打开或拖入电影，选择音轨和字幕。
+2. 看一句、暂停并跟读，按 R 重听。点击字幕单词或输入后回车查词。
+3. 保存笔记，在“本片生词”回到原句继续练习。
+
+Space 播放/暂停；方向键按所选步长跳转；Ctrl+F 聚焦查词；Ctrl+O 打开电影。深浅主题和中文/English 可在右上角切换。
+
+## 本地数据与功能边界
+
+学习记录位于程序旁的 `data`。请在关闭播放器后备份整个目录，升级或移动程序时保留它。电影路径变化可能被视为不同电影。没有账号注册要求。
+
+本地播放、离线词库、已有学习记录可断网使用；在线词典、短语翻译、词典原声和版本检查依赖网络及服务方可用性。本机 OCR 和英语朗读取决于 Windows 已安装的语言和语音组件。程序不对发音评分，不保证全部片源均兼容。
+
+## 分发与第三方许可
+
+本仓库现已公开 FilmEcho 的 C# 源码、构建与验证脚本、图标及地图资源。自有代码沿用 [MIT License](../LICENSE.txt)，第三方组件保留各自许可。运行包与源码分别提供；个人电影、学习数据、日志、更新签名私钥与登录凭据不在仓库中。
+
+## 从源码构建
+
+完整步骤见 [BUILD.md](../BUILD.md)。在 Windows x64、.NET Framework 4.8 和 .NET SDK 环境中，从仓库根目录运行：
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File .\source\build.ps1 -PublicRelease
+```
+
+生成文件位于 `output/public/v1.4.3`。发布版不依赖 WebView2；运行时的 mpv、离线词库需按构建说明准备。源码同时保留完整开发版构建分支，省略 `-PublicRelease` 时需要 WebView2 SDK。
+
+播放器使用独立 mpv 进程、ECDICT、Windows OCR/SAPI/SQLite 以及内嵌地图数据。mpv 当前 Windows 构建启用 GPL，其对应源码和构建材料的提供方式仍在核对；首次公开 Release 前处理这一项。详情参见运行包中的第三方组件说明和 licenses。
+
+官方仓库：[ToDayNiceDay/FilmEcho](https://github.com/ToDayNiceDay/FilmEcho)。问题反馈请使用本仓库 Issues。

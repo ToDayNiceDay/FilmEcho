@@ -1,0 +1,12 @@
+{
+  "SchemaVersion": 1,
+  "IsDemo": true,
+  "GeneratedAt": "2026-10-10T08:00:00Z",
+  "FirstDate": "2026-09-11",
+  "LastDate": "2026-10-10",
+  "Regions": [
+    { "Code": "GD", "Starts": 120, "ActiveToday": 8, "Active30Days": 32 },
+    { "Code": "SH", "Starts": 60, "ActiveToday": 4, "Active30Days": 18 },
+    { "Code": "unknown", "Starts": 10, "ActiveToday": 1, "Active30Days": 3 }
+  ]
+}

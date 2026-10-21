@@ -32,7 +32,17 @@ Space 播放/暂停；方向键按所选步长跳转；Ctrl+F 聚焦查词；Ctr
 
 ## 分发与第三方许可
 
-本仓库用于发布运行包和使用说明，不上传 FilmEcho 的自有 C# 源文件、开发脚本、测试材料、个人电影或学习数据。运行包保留既有 LICENSE 与第三方许可；不附带源码不改变这些许可，也不等于防止反编译。
+本仓库现已公开 FilmEcho 的 C# 源码、构建与验证脚本、图标及地图资源。自有代码沿用 [MIT License](LICENSE.txt)，第三方组件保留各自许可。运行包与源码分别提供；个人电影、学习数据、日志、更新签名私钥与登录凭据不在仓库中。
+
+## 从源码构建
+
+完整步骤见 [BUILD.md](BUILD.md)。在 Windows x64、.NET Framework 4.8 和 .NET SDK 环境中，从仓库根目录运行：
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File .\source\build.ps1 -PublicRelease
+```
+
+生成文件位于 `output/public/v1.4.3`。发布版不依赖 WebView2；运行时的 mpv、离线词库需按构建说明准备。源码同时保留完整开发版构建分支，省略 `-PublicRelease` 时需要 WebView2 SDK。
 
 播放器使用独立 mpv 进程、ECDICT、Windows OCR/SAPI/SQLite 以及内嵌地图数据。mpv 当前 Windows 构建启用 GPL，其对应源码和构建材料的提供方式仍在核对；首次公开 Release 前处理这一项。详情参见运行包中的第三方组件说明和 licenses。
 

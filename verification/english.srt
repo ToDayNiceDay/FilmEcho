@@ -1,0 +1,15 @@
+1
+00:00:01,000 --> 00:00:07,000
+Hello, world! Let's learn English together.
+
+2
+00:00:08,000 --> 00:00:14,000
+Pause, repeat, and listen carefully.
+
+3
+00:00:15,000 --> 00:00:21,000
+Practice makes progress.
+
+4
+00:00:22,000 --> 00:00:29,500
+This is a bilingual subtitle test.
